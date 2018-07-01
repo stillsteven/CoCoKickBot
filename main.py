@@ -20,7 +20,7 @@ admins = json.load(adminsOpen)
 
 clProfile = cl.getProfile()
 clMID = cl.profile.mid
-admin=['u28d781fa3ba9783fd5144390352b0c24', clMID]
+admin=['u7760fe50542a165f561fe63f4dada95a', clMID]
 
 setTime = {}
 setTime = read['wait2']['setTime']
@@ -85,21 +85,21 @@ def logRead():
 def Tag(to, mid):
     try:
         aa = '{"S":"0","E":"3","M":'+json.dumps(mid)+'}'
-        text_ = '@co \n'
+        text_ = '@興興 \n'
         cl.sendMessage(to, text_, contentMetadata={'MENTION':'{"MENTIONEES":['+aa+']}'}, contentType=0)
     except Exception as error:
         logError(error)
 
 def helpmessage():
-    helpMessage = """☆║．．．．CoCo特製半垢．．．．║☆
+    helpMessage = """☆║．．．．興興の半垢．．．．║☆
 ↪ 「Help」        查看指令列表
 ↪ 「Help Black」  查看黑單指令
 ↪ 「Help Bot」    查看機器指令
 ↪ 「Help Group」  查看群組指令
 ↪ 「Help Kick」   查看踢人指令
 ↪ 「Help Other」  查看其他指令
-〘 Creator By: ©CoCo™  〙
-〘 line.me/ti/p/1MRX_Gjbmv 〙
+〘 Creator By: 興興  〙
+〘 line.me/ti/p/DAKw6R0EJP 〙
 ☆║．．．．．．．．．．．．．．．║☆"""
     return helpMessage
 
@@ -114,8 +114,8 @@ def helpblack():
 ↪ 「Unban」      好友資料解除黑單
 ↪ 「Unban:」     系統識別碼解除黑單
 ↪ 「Unban @」    標註解除黑單
-〘 Creator By: ©CoCo™  〙
-〘 line.me/ti/p/1MRX_Gjbmv 〙
+〘 Creator By: 興興  〙
+〘 line.me/ti/p/DAKw6R0EJP 〙
 ☆║．．．．．．．．．．．．．．．║☆"""
     return helpBlack
 
@@ -127,8 +127,8 @@ def helpbot():
 ↪ 「Reread On/Off」查看文字收回 打開/關閉
 ↪ 「Rec On/Off」   查看貼圖收回 打開/關閉
 ↪ 「Tag On/Off」   標註全部人 打開/關閉
-〘 Creator By: ©CoCo™  〙
-〘 line.me/ti/p/1MRX_Gjbmv 〙
+〘 Creator By: 興興  〙
+〘 line.me/ti/p/DAKw6R0EJP 〙
 ☆║．．．．．．．．．．．．．．．║☆"""
     return helpBot
 
@@ -140,8 +140,8 @@ def helpgroup():
 ↪ 「Ginfo」   查看群組狀態
 ↪ 「Inv mid」 使用系統識別碼邀請進入群組
 ↪ 「Ourl」    開啟群組網址
-〘 Creator By: ©CoCo™  〙
-〘 line.me/ti/p/1MRX_Gjbmv 〙
+〘 Creator By: 興興  〙
+〘 line.me/ti/p/DAKw6R0EJP 〙
 ☆║．．．．．．．．．．．．．．．║☆"""
     return helpGroup
 
@@ -153,8 +153,8 @@ def helpkick():
 ↪ 「Ri @」     標註來回機票
 ↪ 「Tk @」     標注踢出成員
 ↪ 「Uk mid」   使用系統識別碼踢出成員
-〘 Creator By: ©CoCo™  〙
-〘 line.me/ti/p/1MRX_Gjbmv 〙
+〘 Creator By: 興興  〙
+〘 line.me/ti/p/DAKw6R0EJP 〙
 ☆║．．．．．．．．．．．．．．．║☆"""
     return helpKick
 
@@ -173,8 +173,8 @@ def helpother():
 ↪ 「Speed」  查看機器速度
 ↪ 「Sr」     已讀點重設
 ↪ 「Tagall」 標註群組所有成員
-〘 Creator By: ©CoCo™  〙
-〘 line.me/ti/p/1MRX_Gjbmv 〙
+〘 Creator By: 興興  〙
+〘 lline.me/ti/p/DAKw6R0EJP 〙
 ☆║．．．．．．．．．．．．．．．║☆"""
     return helpOther
 
@@ -327,7 +327,7 @@ def SEND_MESSAGE(op):
             elif text.lower() == 'help':
                 helpMessage = helpmessage()
                 cl.sendMessage(to, str(helpMessage))
-                cl.sendContact(to, "u28d781fa3ba9783fd5144390352b0c24")
+                cl.sendContact(to, "u7760fe50542a165f561fe63f4dada95a")
             elif text.lower() == 'help black':
                 helpBlack = helpblack()
                 cl.sendMessage(to, str(helpBlack))
@@ -438,7 +438,7 @@ def SEND_MESSAGE(op):
                     if _name in g.displayName:
                         b.append({"S":str(s), "E" :str(s+6), "M":g.mid})
                         s += 7
-                        txt += u'@CoCo \n'
+                        txt += u'興興 \n'
                 if b == []:
                     cl.sendMessage(to, "這個群組沒有這個人")
                 else:
@@ -455,7 +455,7 @@ def SEND_MESSAGE(op):
                         if _name in contact.displayNameOverridden:
                             b.append({"S":str(s), "E" :str(s+6), "M":g.mid})
                             s += 7
-                            txt += u'@CoCo \n'
+                            txt += u'興興 \n'
                     except:
                         pass
                 if b == []:
@@ -622,7 +622,7 @@ def SEND_MESSAGE(op):
             elif text.lower() == 'about':
                 try:
                     arr = []
-                    owner = "u28d781fa3ba9783fd5144390352b0c24"
+                    owner = "u7760fe50542a165f561fe63f4dada95a"
                     creator = cl.getContact(owner)
                     contact = cl.getContact(clMID)
                     grouplist = cl.getGroupIdsJoined()
@@ -636,7 +636,7 @@ def SEND_MESSAGE(op):
                     ret_ += "\n╠ 黑單 : {}".format(str(len(blockedlist)))
                     ret_ += "\n╠ 邀請 : {}".format(str(len(groupinvite)))
                     ret_ += "\n╠══[ 關於機器 ]"
-                    ret_ += "\n╠ 版本 : CoCo特製版v1.5"
+                    ret_ += "\n╠ 版本 : 興興特製版2.0"
                     ret_ += "\n╠ 作者 : {}".format(creator.displayName)
                     ret_ += "\n╚══[ 未經許可禁止重製 ]"
                     cl.sendMessage(to, str(ret_))
@@ -775,7 +775,7 @@ def SEND_MESSAGE(op):
                             for i in group.members[a*100 : (a+1)*100]:
                                 b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                                 s += 7
-                                txt += u'@CoCo \n'
+                                txt += u'興興 \n'
                             cl.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
                             cl.sendMessage(to, "總共 {} 個成員".format(str(len(nama))))
                     else:
